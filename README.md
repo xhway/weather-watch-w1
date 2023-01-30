@@ -5,7 +5,13 @@
 Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
 
+## Screenshot before data input
+<img width="1900" alt="Screen Shot 2023-01-30 at 4 29 36 PM" src="https://user-images.githubusercontent.com/118576289/215610341-771f95db-b34b-4c49-a381-b16aeb30ee7d.png">
 
+## Screenshot after data input
+
+
+<img width="1895" alt="Screen Shot 2023-01-30 at 4 35 02 PM" src="https://user-images.githubusercontent.com/118576289/215610439-a705a0c8-4512-40df-93a3-f22edb7fd89e.png">
 
 
 ## User Story
