@@ -32,21 +32,21 @@ function displayWeather(event){
 
 function currentWeather(city){
     
-    var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + APIKey;
+    var qURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + APIKey;
     $.ajax({
-        url:queryURL,
+        url:qURL,
         method:"GET",
     }).then(function(response){
 
        
-        console.log(response);
+        
         //Grab icons from API
         var weathericon= response.weather[0].icon;
-        var iconurl="https://openweathermap.org/img/wn/"+weathericon +"@2x.png";
+        var iconURL="https://openweathermap.org/img/wn/"+weathericon +"@2x.png";
         
         var date=new Date(response.dt*1000).toLocaleDateString();
        
-        $(currentCity).html(response.name +"("+date+")" + "<img src="+iconurl+">");
+        $(currentCity).html(response.name +"("+date+")" + "<img src="+iconURL+">");
         
         // Convert temperature to fahrenheit
 
@@ -64,7 +64,7 @@ function currentWeather(city){
         forecast(response.id);
         if(response.cod==200){
             sCity=JSON.parse(localStorage.getItem("cityname"));
-            console.log(sCity);
+          
             if (sCity==null){
                 sCity=[];
                 sCity.push(city.toUpperCase()
@@ -97,7 +97,7 @@ function UVIndex(ln,lt){
     
 // Display 5 day forecast
 function forecast(cityid){
-    // var dayover= false;
+   
     var queryforcastURL="https://api.openweathermap.org/data/2.5/forecast?id="+cityid+"&appid="+APIKey;
     $.ajax({
         url:queryforcastURL,
@@ -129,7 +129,7 @@ function addToList(c){
     $(".list-group").append(listEl);
 }
 // Function to display past searches
-function showPastSearch(event){
+function showPrevSearch(event){
     var liEl=event.target;
     if (event.target.matches("li")){
         city=liEl.textContent.trim();
@@ -162,6 +162,6 @@ function clearHistory(event){
 }
 //Click funcitons for buttons
 $("#search-button").on("click",displayWeather);
-$(document).on("click",showPastSearch);
+$(document).on("click",showPrevSearch);
 $(window).on("load",loadlastCity);
 $("#clear-history").on("click",clearHistory);
