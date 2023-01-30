@@ -8,9 +8,6 @@ Third-party APIs allow developers to access their data and functionality by maki
 
 <img width="1900" alt="Screen Shot 2023-01-30 at 4 29 36 PM" src="https://user-images.githubusercontent.com/118576289/215599856-2d5a2a30-44fb-4047-8d72-ebda18b3b981.png">
 
-## Screenshot after data input
-
-<img width="1895" alt="Screen Shot 2023-01-30 at 4 35 02 PM" src="https://user-images.githubusercontent.com/118576289/215600259-d47a2d7f-b4ab-487d-803d-a36683d87ca2.png">
 
 
 
